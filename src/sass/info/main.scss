@@ -1,0 +1,327 @@
+@import 'variables';
+
+*{
+  outline: none;
+}
+a:focus, a:hover, input:focus, input:hover {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  @import 'MediaQueries/main';
+  overflow-x: hidden;
+}
+  
+header {
+  background: url("../images/fon1.png") no-repeat center top;
+}
+
+.menu {
+  padding: 26px 0 0;
+  list-style: none;
+  margin: 0;
+  float: left;
+  li {
+    transition: 0.2s;
+    color: #2c2626;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    cursor: pointer;
+    &:hover {
+      color: #75c043;
+    }
+  }
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 26px 0 0;
+  float: right;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin:  0 8.5px;
+    transition: 0.2s;
+    &:hover {
+      transform: scale(0.9);
+    }
+    a {
+      display: block;
+    }
+    &:first-child {
+      margin:  0 30px 0 0;
+      a.phone {
+        padding-left: 30px;
+        background: url('../images/forma-1.svg') no-repeat left center;
+        color: #2c2626;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+    .fb {
+      background: url('../images/fb.svg') no-repeat center;
+      width: 40px;
+      height: 40px;
+    }
+    .inst {
+      background: url('../images/inst.svg') no-repeat center;
+      width: 40px;
+      height: 40px;
+    }
+    .ytb {
+      background: url('../images/ytb.svg') no-repeat center;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.head {
+  text-align: center;
+  .record-btn {
+      padding: 25px 33px 21px 73px;
+      /*background-image: url("../images/4651.svg");
+      background-repeat: no-repeat;
+      background-position: 28px 16px;*/
+    &:before {
+       content: "";
+      background-image: url("../images/4651.svg");
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 29px;
+      position: absolute;
+      top: 18px;
+      left: 28px;
+      background-size: 100%;
+    }
+  }
+}
+
+.logo {
+  margin-top: -20px;
+  margin-bottom: 28px;
+  img {
+    max-width: 294px;
+    width: 100%;
+  }
+}
+
+.head-info {
+  color: #2c2626;
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  margin-bottom: 49px;
+  max-width: 745px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.record-btn {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1px;
+  border: 0;
+  max-width: 460px;
+  border-radius: 34px;
+  background-color: #75c043;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  transition-property: color;
+  transition-duration: .3s;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5db91f;
+    box-shadow: 0 0 20px 0 rgba(39,23,0,.3);
+    transform: scale(0);
+    border-radius: 34px;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+  &:hover {
+    &:active, &:after,&:focus:before, {
+      transform: scale(1);
+    }
+  }
+}
+
+
+
+.address {
+  background-color: #75c043;
+  list-style: none;
+  margin: 118px 0 0 ;
+  padding: 19px 0 20px;
+  text-align: center;
+  li {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.56px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 36px;
+    margin: 0 31px;
+    line-height: 1;
+    &:first-child {
+      &:before {
+        content: "";
+        background: url('../images/shape-1.svg') no-repeat center;
+        width: 17px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: 100%;
+
+      }
+    }
+    &:last-child {
+      &:before {
+        content: "";
+        background: url('../images/cl.svg') no-repeat center;
+       width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+.menu-img {
+  text-align: center;
+  display: inline-block;
+  margin-right: 55px;
+}
+
+.menu-btn {
+  float: left;
+  color: #2c2626;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-left: 35px;
+  letter-spacing: 1.1px;
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+  &.active {
+    span {
+    border-top: 0px solid #2c2626;
+    &:before {
+    left: 0;
+    top: 0;
+      transform: rotate(45deg);
+    }
+    &:after {
+    bottom: 0;
+      transform: rotate(-45deg);
+      
+    }
+  }
+  }
+  
+  span {
+    width: 19px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 2px solid #2c2626;
+    transition: 0.2s;
+    &:before {
+      content: "";
+      width: 19px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    border-top: 2px solid #2c2626;
+    }
+    &:after {
+      content: "";
+      width: 19px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-top: 2px solid #2c2626;
+    }
+  }
+}
+* {
+  outline: 0 !important;
+}
+
+.fixed {
+  text-align: right;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 18px 0;
+  display: none;
+  .contact-list {
+    padding-top: 10px;
+    li {
+      a {
+        &.fb {
+          background: url('../images/fb1.svg') no-repeat center;
+          background-size: 100%;
+        }
+        &.inst {
+          background: url('../images/inst1.svg') no-repeat center;
+          background-size: 100%;
+        }
+        &.ytb {
+          background: url('../images/ytb1.svg') no-repeat center;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+  .menu {
+    display: none;
+    text-align: center;
+    float: none;
+    margin: 106px 0;
+    li {
+      display: block;
+    }
+  }
+}

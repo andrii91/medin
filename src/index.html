@@ -27,22 +27,29 @@
 <body>
 
   <header>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <ul class="menu">
-            <li>Чем занимаемся? </li>
-            <li>Отзывы </li>
-            <li>Гарантии </li>
-          </ul>
-          <ul class="contact-list">
-            <li><a href="tel:+38 (095) 720-00-52" class="phone">+38 (095) 720-00-52</a></li>
-            <li><a href="#" class="fb"></a></li>
-            <li><a href="#" class="inst"></a></li>
-            <li><a href="#" class="ytb"></a></li>
-          </ul>
+   <video width="100%" poster="images/none.png" muted  preload id="head-video" loop autoplay>
+     <source src="video/MedinUA.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    </video>
+    <div class="nav">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <button class="menu-mob "><span></span></button>
+            <ul class="menu">
+              <li class="video-link">Чем занимаемся? </li>
+              <li class="history-link">Отзывы </li>
+              <li>Гарантии </li>
+            </ul>
+            <ul class="contact-list">
+              <li><a href="tel:+38 (095) 720-00-52" class="phone">+38 (095) 720-00-52</a></li>
+              <li><a href="#" class="fb"></a></li>
+              <li><a href="#" class="inst"></a></li>
+              <li><a href="#" class="ytb"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
+
     </div>
     <div class="head">
       <div class="container">
@@ -50,9 +57,10 @@
           <div class="col">
             <div class="logo">
               <img src="images/logoh.svg" alt="">
+              <img src="images/lhb.svg" alt="">
             </div>
             <p class="head-info">Клиника прогрессивной ортопедии, спинальной хирургии, <br>травматологии, сосудистой хирургии и реабилитации</p>
-            <button class="record-btn">Запишись на консультацию</button>
+            <button class="record-btn modal-btn" data-modal="modal_1">Запишись на консультацию</button>
           </div>
         </div>
       </div>
@@ -66,10 +74,10 @@
     <div class="container">
       <div class="row">
         <div class="col">
-         <button class="menu-btn "><span></span> Меню</button>
-         <div class="menu-img">
-           <img src="images/logo.svg" alt="">
-         </div>
+          <button class="menu-btn "><span></span> Меню</button>
+          <div class="menu-img">
+            <img src="images/logo.svg" alt="">
+          </div>
           <ul class="contact-list">
             <li><a href="tel:+38 (095) 720-00-52" class="phone">+38 (095) 720-00-52</a></li>
             <li><a href="#" class="fb"></a></li>
@@ -77,8 +85,8 @@
             <li><a href="#" class="ytb"></a></li>
           </ul>
           <ul class="menu">
-            <li>Чем занимаемся? </li>
-            <li>Отзывы </li>
+            <li class="video-link">Чем занимаемся? </li>
+            <li class="history-link">Отзывы </li>
             <li>Гарантии </li>
           </ul>
         </div>
@@ -86,16 +94,407 @@
     </div>
   </nav>
   <main>
-    <section class="docror" style="height: 100vh">
+    <section class="docror">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="doctor-container">
+              <div class="doctor-img">
+                <div class="info">выберите <br>проблемную <br>область</div>
+                <img src="images/man.png" alt="">
+                <ul class="check-problem">
+                  <li data-problem="rear" title="Спина"></li>
+                  <li data-problem="shoulder" title="Плечо"></li>
+                  <li data-problem="elbow" title="Локоть"></li>
+                  <li data-problem="hip" title="Бедро"></li>
+                  <li data-problem="foot" title="Стопа"></li>
+                  <li data-problem="knee" title="Колено"></li>
+                </ul>
+                <div id='docror-carousel' class="docror-carousel">
+                  <div class="corousel-nav">
+                    <div class="corousel-prev"></div>
+                    <div class="corousel-next"></div>
+                  </div>
+                  <div class="carousel-container">
+                    <div class="carousel-item" data-doctor="rear,shoulder,elbow,hip,foot">
+                      <img src="images/img-7036.png" alt="">
+                      <div class="docror-info">
+                        <h4>Александр Лоскутов</h4>
+                        <p>Академик НАМН Украины,<br> специализист в сфере хирургии спины, плеча, локтя, бедра, стопы</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-doctor="rear,shoulder,elbow,hip">
+                      <img src="images/photo1.png" alt="">
+                      <div class="docror-info">
+                        <h4>Артем Науменко</h4>
+                        <p>врач<br> ортопед-травматолог, специалист в сфере хиругии спины, плеча, локтя, бедра</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-doctor="shoulder,elbow,hip,foot,knee">
+                      <img src="images/564.png" alt="">
+                      <div class="docror-info">
+                        <h4>Олег Лоскутов</h4>
+                        <p>врач<br> ортопед-травматолог, специалист в сфере хирургии стопы, плеча, локтя, бедра, колена</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-doctor="shoulder,knee">
+                      <img src="images/9846.png" alt="">
+                      <div class="docror-info">
+                        <h4>Алексей Давыдов</h4>
+                        <p>врач <br>ортопед-травматолог, специалист в сфере хирургии плеча, колена</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-doctor="elbow,foot,knee">
+                      <img src="images/85416.png" alt="">
+                      <div class="docror-info">
+                        <h4>Виктор Рыбка</h4>
+                        <p>врач<br> ортопед-травматолог, специалист в сфере хирургии стопы, колена, локтя</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="float-right">
+                <h2 class="docror-title title"><span>Р</span>асскажите, <br>что <span>в</span>ас беспокоит и наш <br>специалист <span>в</span>ам поможет</h2>
+                <form action="#" class="registration">
+                  <label for="">имя
+                      <input type="text" name="name" placeholder="Ваше имя" required>
+                    </label>
+                  <label for="">телефон
+                      <input type="text" name="phone" placeholder="Номер телефона" required>
+                    </label>
+                  <label for="">сообщение
+                      <textarea name="mess" placeholder="Расскажите о своей проблеме" ></textarea>
+                    </label>
+                  <input type="hidden" name="problem">
+                  <button class="record-btn">отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video">
       <div class="container">
         <div class="row">
-          <div class="col"></div>
+          <div class="col">
+            <h2 class="video-title title"><span>П</span>осмотрите, чем мы занимаемся</h2>
+            <div class="video-container">
+              <div class="video-item ">
+                <div class="video-poster"></div>
+                <div class="video-info">
+                  <div class="info-box">
+                    <div class="video-btn"></div>
+                    <h4>Ортопедия <br> травматология</h4>
+                  </div>
+                </div>
+                <video width="100%" poster="images/none.png" controls="controls" id="v1">
+                   <source src="video/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  </video>
+              </div>
+              <div class="video-item">
+                <div class="video-poster"></div>
+                <div class="video-info">
+                  <div class="info-box">
+                    <div class="video-btn"></div>
+                    <h4>Реабилитация <br> <br></h4>
+                  </div>
+                </div>
+                <video width="100%" poster="images/none.png" controls="controls" id="v2">
+                   <source src="video/v2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  </video>
+              </div>
+              <div class="video-item">
+                <div class="video-poster"></div>
+                <div class="video-info">
+                  <div class="info-box">
+                    <div class="video-btn"></div>
+                    <h4>Заболевания <br>спины</h4>
+                  </div>
+                </div>
+                <video width="100%" poster="images/none.png" controls="controls" id="v3">
+                   <source src="video/v3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> 
+                  </video>
+              </div>
+              <div class="video-item">
+                <div class="video-poster"></div>
+                <div class="video-info">
+                  <div class="info-box">
+                    <div class="video-btn"></div>
+                    <h4>Заболевания <br>сосудов</h4>
+                  </div>
+                </div>
+                <video width="100%" poster="images/none.png" controls="controls" id="v4">
+                   <source src="video/v4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="history">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="history-title title"><span>И</span>стории наших пациентов</h2>
+            <div class="carousel-block">
+              <div class="video-carousel owl-carousel">
+                <div class="item">
+                  <div class="video-info">
+                    <div class="history-play"></div>
+
+                  </div>
+                  <video width="100%" poster="images/v4.png" controls="controls" id="v5">
+                   <source src="video/v4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  </video>
+                </div>
+                <div class="item">
+                  <div class="video-info">
+                    <div class="history-play"></div>
+                  </div>
+                  <video width="100%" poster="images/v4.png" controls="controls" id="v6">
+                   <source src="video/v4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  </video>
+                </div>
+                <div class="item">
+                  <div class="video-info">
+                    <div class="history-play"></div>
+                  </div>
+                  <video width="100%" poster="images/v4.png" controls="controls" id="v7">
+                   <source src="video/v4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  </video>
+                </div>
+              </div>
+              <div class="video__slider-pos">
+                <div class="video__slider-prev"></div>
+                <div class="video__slider-cur">01</div> /
+                <div class="video__slider-all">03</div>
+                <div class="video__slider-next"></div>
+              </div>
+            </div>
+            <div class="carousel-block">
+              <div class="photo-carousel owl-carousel">
+                <div class="item">
+                  <img src="images/987645.png" alt="">
+                  <div class="client-box">
+                    <h5>Владислава Шишко <span>3 года после реабилитации</span></h5>
+
+                    <p>Оперировалась в этой клинике без очередей, с комфортом, с вниманием от персонала клиники. На операцию шла и ничего не боясь. Все анализы сдавала тут же. Подготовка к операции, сама операция, после операции - все на высшем уровне! Внимание от анестезиолога до медсестры, которая подавала попить, заслуживает отдельного СПАСИБО!!! </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="images/987645.png" alt="">
+                  <div class="client-box">
+                    <h5>Владислава Шишко <span>3 года после реабилитации</span></h5>
+
+                    <p>Оперировалась в этой клинике без очередей, с комфортом, с вниманием от персонала клиники. На операцию шла и ничего не боясь. Все анализы сдавала тут же. Подготовка к операции, сама операция, после операции - все на высшем уровне! Внимание от анестезиолога до медсестры, которая подавала попить, заслуживает отдельного СПАСИБО!!! </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="images/987645.png" alt="">
+                  <div class="client-box">
+                    <h5>Владислава Шишко <span>3 года после реабилитации</span></h5>
+
+                    <p>Оперировалась в этой клинике без очередей, с комфортом, с вниманием от персонала клиники. На операцию шла и ничего не боясь. Все анализы сдавала тут же. Подготовка к операции, сама операция, после операции - все на высшем уровне! Внимание от анестезиолога до медсестры, которая подавала попить, заслуживает отдельного СПАСИБО!!! </p>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="photo__slider-pos">
+                <div class="photo__slider-prev"></div>
+                <div class="photo__slider-cur">01</div> /
+                <div class="photo__slider-all">03</div>
+                <div class="photo__slider-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="road">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="title"><span>В</span>аша дорога в <span>м</span>edinua</h2>
+            <ul class="road-list">
+              <li><span>Ваш дом</span></li>
+              <li><span>Вас встретят <br>на автомобиле <br>премиум-класса</span></li>
+              <li><span>Консультация <br>с нашими <br>специалистами</span> </li>
+              <li><span>Диагностика</span></li>
+              <li><span>Лечение</span></li>
+              <li><span>Выписка</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="calculation">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="calculationp-title"><span>Р</span>ассчитать стоимость моего лечения</h2>
+            <div class="calculationp-box">
+              <h3><span>В</span>ас что-то беспокоит?</h3>
+              <p>Расскажите о своей боли и мы составим <br>предварительную программу для вашего лечения.</p>
+              <form action="#" class="calculation-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="text" name="phone" placeholder="Номер телефона" required>
+                <textarea name="mess" placeholder="Расскажите о своей проблеме" required></textarea>
+                <button class="record-btn">Расчитать стоимость</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <h2 class="about-title title"><span>M</span>edin<span>Ua</span> — это</h2>
+      <ul class="about-list">
+        <li>
+          <h3><img src="images/004-sun.svg" alt=""><span>А</span>тмосфера</h3>
+          <p><span>Мы рушим все мифы и стереотипы о медицине в Украине.</span> В нашей клинике врач с удовольствием предложит вам кофе, а медсестра никогда не заставит находиться в ожидании.</p>
+          <p>В MedinUA работает библиотека, также у Вас есть постоянный онлайн-доступ к Вашим любимым фильмам.</p>
+        </li>
+        <li>
+          <h3><img src="images/002-handshake.svg" alt=""><span>Д</span>оверие</h3>
+          <p><span>Если вы становитесь пациентом нашей клиники, мы принимаем Вас в нашу большую семью из 10 000 тысяч счастливых людей.</span> Каждый год мы проводим около 684 операций и 2147 консультаций.</p>
+          <p>Мы не скрываем от наших пациентов информацию об их здоровье, диагнозе или факторах риска. Мы хотим, чтобы вы обладали полным спектром информации и знали, кому доверяете свое здоровье. </p>
+        </li>
+        <li>
+          <h3><img src="images/003-favorites.svg" alt=""><span>Э</span>кспертность</h3>
+          <p>Наши специалисты практиковались на мировом уровне, обучаясь в <span>Shpazen hospital</span> — детская ортопедия (Вена, Австрия), <span>München Nord</span> — микрохирургия позвоночника (Мюнхен, Германия), <span>Orthopedic privat Clinic</span> — ортопедия (Аугсбург, Германия).</p>
+          <p>Благодаря опыту наших докторов в MedinUa наиболее низкий показатель по осложнениям в Украине — всего 0,5%. </p>
+        </li>
+        <li>
+          <h3><img src="images/001-charity.svg" alt=""> <span>К</span>омплексность</h3>
+          <p>Собственная лаборатория дает возможность контролировать состояние Вашего здоровья 24/7, для того, чтобы окончательно убедиться в Вашем диагнозе.</p>
+          <p>Мы сами проведем полную диагностикуи окончательно удостоверимся в Вашем диагнозе, выберем лучшего врача для вас, поможем определиться с методом оптимального для вас лечения, разработаем индивидуальный курс реабилитации. </p>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </section>
+    <section class="patients">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="patients-title title"><span>П</span>ациенты <span>M</span>edin<span>Ua</span> <br>становятся на ноги в кратчайшие сроки</h2>
+            <p class="patients-info">Например, <a href="https://www.facebook.com/a.s.necheporenko?ref=br_rs" target="_blank">Андрей Нечепоренко</a> установил новый рекорд Украины в велоспорте уже через 3 месяца и 10 дней после операции.</p>
+            <div class="patients-img">
+              <img src="images/8513312.png" alt="">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-small">
+      <ul class="about-list">
+        <li>
+          <h3><span>В</span>се мы — одна семья</h3>
+          <p>Близкие по духу люди. И мы счастливы, что можем помочь каждому достигнуть новых вершин.</p>
+        </li>
+        <li>
+          <h3><span>M</span>edin<span>Ua</span> рекомендуют близким</h3>
+          <p>К нам приводят своих детей и родителей. <br>Нас считают друзьями, опорой и поддержкой.</p>
+        </li>
+
+      </ul>
+      <div class="clear"></div>
+    </section>
+    <section class="problem_form">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="calculationp-box">
+              <h3><span>Е</span>сть проблемы <br>со здоровьем — не тяните</h3>
+              <p>Доверьтесь тем, кто хочет сделать вашу жизнь счастливее.</p>
+              <form action="#" class="calculation-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="text" name="phone" placeholder="Номер телефона" required>
+                <textarea name="mess" placeholder="Расскажите о своей проблеме" required></textarea>
+                <button class="record-btn">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="contacts-title title"><span>К</span>ак нас найти</h2>
+            <ul class="contacts-list">
+              <li class="check"> Днепр, Симферопольская, 2 </li>
+              <li class="time">Работаем с 9:00 до 18:00. Без выходных</li>
+              <li class="phone">(067) 795-02-35 </li>
+            </ul>
+            <div style="width: 100%; " class="gmap" data-address="ул. Симферопольская, 2, Днипро, Днепропетровская область" data-zoom="16" data-marker="images/pin.svg">
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="logo"><img src="images/logolist.png" alt=""></div>
+          <ul class="footer-menu">
+            <li><a href="#">Главная                         </a></li>
+            <li><a href="#">Что мы лечим?</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Команда</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li><a href="#">Отзывы о MedinUA</a></li>
+            <li><a href="#">Блог Доктора Лоскутова</a></li>
+            <li><a href="#">Сайт хирургии стопы</a></li>
+            <li><a href="#">Сайт спинальной хирургии</a></li>
+            <li><a href="#">Стоматология DentinUA</a></li>
+            <li><a href="#">Лаборатория «Medinua»</a></li>
+          </ul>
+          <ul class="contact-list">
+            <li><a href="#" class="fb"></a></li>
+            <li><a href="#" class="inst"></a></li>
+            <li><a href="#" class="ytb"></a></li>
+          </ul>
+          <p>Copyright © <span>2007-2017 medinua</span> <br>Копирование материалов сайта без разрешения администрации и ссылки на источник запрещено. <br>Отзывы, оставленные посетителями сайта, являются личным мнением их авторов <br>и не претендуют на статус официальных описаний или заявлений</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal" id="modal_1">
+    <div class="popup__close"></div>
+    <div class="modal-content">
+      <div class="row align-items-center ">
+        <div class="col-md-6 col-lg-6">
+          <img src="images/lf.png" alt="">
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <form action="#" class="registration">
+            <label for="">имя
+                      <input type="text" name="name" placeholder="Ваше имя" required="">
+                    </label>
+            <label for="">телефон
+                      <input type="text" name="phone" placeholder="Номер телефона" required="">
+                    </label>
+            <input type="hidden" name="problem">
+            <button class="record-btn">отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+  </script>
   <script src="js/vendor.js"></script>
   <script src="js/app.js"></script>
 </body>

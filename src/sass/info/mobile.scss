@@ -1,3 +1,498 @@
 & {
-  
+  header {
+    background: url(../images/fon1.png) no-repeat center ;
+    &:before {
+      display: none;
+    }
+  }
+  .thx {
+    padding-top: 20px;
+  }
+  .thx .menu-img {
+    img {
+      max-width: 80px;
+    }
+  }
+  #head-video {
+    display: none;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 12px 0;
+    &.nav_fixed {
+      background: #fff;
+      box-shadow: 3px 4px 10px rgba(0, 0, 0, .15);
+    }
+  }
+  header {
+    padding-top: 76px;
+    background-size: cover;
+  }
+  main {
+    overflow-x: hidden;
+  }
+  .menu-mob {
+    display: block;
+  }
+  .menu {
+    display: none;
+    float: none;
+    li {
+      display: block;
+    }
+  }
+  .contact-list {
+    padding-top: 0;
+    li {
+      display: none;
+      &:first-child {
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+  .head .logo {
+    position: relative;
+    img {
+      &:first-child {
+        max-width: 103px;
+      }
+      &:last-child {
+        max-width: 134px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-30%);
+      }
+    }
+  }
+  .head-info {
+    color: #2c2626;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.09px;
+    br {
+      display: none;
+    }
+  }
+  .head .record-btn {
+    padding-left: 44px;
+    padding-right: 22px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    /* Text style for "Запишись н" */
+    letter-spacing: 0.07px;
+    &:before {
+      width: 16px;
+      height: 15px;
+      top: 21px;
+      left: 19px;
+    }
+  }
+  .modal-content {
+    img {
+      width: 100%;
+      max-width: 115px;
+    }
+  }
+  .modal {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .address {
+    margin-top: 53px;
+    padding: 20px 55px;
+    li {
+      font-size: 16px;
+      font-weight: 400;
+      /* Text style for "Р, аботаем" */
+      letter-spacing: 0.41px;
+      margin: 0;
+      padding: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .docror {
+    padding-top: 198px;
+    padding-bottom: 70px;
+    .docror-title {
+      position: absolute;
+      top: -120px;
+      left: 15px;
+      font-size: 20px;
+      br {
+        display: none;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+  .doctor-img .info {
+    display: none;
+  }
+  .doctor-img {
+    margin-top: 36px;
+    img {
+      margin-left: -50px;
+      width: 448.5px;
+    }
+  }
+  .check-problem {
+    margin-left: -50px;
+    width: 448.5px;
+    li {
+      width: 11px;
+      height: 12px;
+      &:before {
+        width: 11px;
+        height: 12px;
+      }
+    }
+  }
+  .docror-carousel {
+    max-width: 290px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+    background-color: #fff;
+    position: absolute;
+    bottom: -355px;
+    left: 0;
+    z-index: 3;
+    display: none;
+    overflow: hidden;
+  }
+  .docror-carousel .carousel-item img {
+    margin-left: 0;
+  }
+
+  .check-problem li[data-problem=rear],
+  .check-problem li[data-problem=rear].active {
+    top: 55px;
+    right: 200px;
+  }
+  .check-problem li[data-problem=shoulder],
+  .check-problem li[data-problem=shoulder].active {
+    top: 80px;
+    right: 120px;
+  }
+  .check-problem li[data-problem=elbow],
+  .check-problem li[data-problem=elbow].active {
+    top: 185px;
+    right: 115px;
+  }
+  .check-problem li[data-problem=hip],
+  .check-problem li[data-problem=hip].active {
+    top: 190px;
+    left: 155px;
+  }
+  .check-problem li[data-problem=knee],
+  .check-problem li[data-problem=knee].active {
+    top: 90px;
+    left: 130px;
+  }
+  .check-problem li[data-problem=foot],
+  .check-problem li[data-problem=foot].active {
+    top: 270px;
+    left: 55px;
+  }
+  .registration {
+    margin-left: 0;
+  }
+  .registration label {
+    font-size: 10px;
+  }
+  .registration label input, .registration label textarea {
+    font-size: 18px;
+    width: 100%;
+  }
+  .float-right {
+    width: 100%;
+  }
+  .registration .record-btn {
+    font-size: 16px;
+  }
+  .video-item {
+    min-height: 164px;
+    max-width: 100%;
+    margin: 0 0 16px;
+  }
+  .lazyYT-container {
+    min-height: 164px;
+    background-size: cover;
+    
+  }
+   .video-btn {
+        transform: scale(0.64);
+  }
+   .history-play {
+        transform: scale(.64) translateX(-85%) translateY(-85%);
+  }
+  .video-info h4 {
+    font-size: 18px;
+    font-weight: 400;
+    
+    letter-spacing: 0.08px;
+    br {
+      display: none;
+    }
+  }
+  .video {
+    padding: 72px 0 0;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .title, .title>span {
+    font-size: 20px;
+  }
+  .history {
+    padding: 70px 0;
+  }
+  .photo-carousel {
+    margin-top: 40px;
+    .item {
+      padding: 40px 15px;
+    }
+    &.owl-carousel .owl-item img {
+      max-width: 110px;
+      margin: 0 auto;
+      float: none;
+    }
+  }
+  .photo__slider-pos, .video__slider-pos {
+    margin: 21px auto 0;
+  }
+  .client-box {
+    p {
+      font-size: 17px;
+      text-align: justify;
+    }
+  }
+  .client-box h5 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    span {
+      float: none;
+      display: block;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+  .road {
+    padding: 70px 0;
+  }
+  .road-list {
+    margin-top: 40px;
+    width: 100%;
+    height: inherit;
+    border: 0;
+    text-align: center;
+    padding-left: 22px;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    &:after, &:before {
+      display: none;
+    }
+    li {
+      position: static;
+      font-size: 18px;
+      margin-bottom: 21px;
+
+      line-height: 3;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+      }
+      &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+        padding: 0;
+        padding-left: 84px;
+        height: inherit;
+        min-height: 60px;
+        width: inherit;
+        display: inline-block;
+        transform: translateX(0%) translateY(0%);
+        background-size: 23%;
+        background-position: left center;
+        text-align: left;
+      }
+    }
+  }
+  .calculation {
+    background: #f7f9fc;
+    padding: 21px 0;
+  }
+  .calculationp-title {
+    color: #000000;
+  font-size: 20px;
+    max-width: 210px;
+      line-height: 1;
+    margin:  0 auto 30px;
+  }
+   .calculationp-title span {
+    color: #000000;
+  font-size: 20px;
+  }
+  .calculationp-box {
+    background: none;
+    padding: 0;
+    h3 {
+      font-size: 20px;
+      max-width: 170px;
+      margin:  0 auto 15px;
+      line-height: 1;
+    }
+    p {
+      font-size: 18px;
+      br {
+        display: none;
+      }
+    }
+  }
+  .calculation-form {
+    input, textarea {
+      font-size: 18px;
+    }
+    .record-btn {
+      font-size: 16px;
+    }
+  }
+  .about {
+    padding-top: 70px;
+  }
+  .about-list li {
+    width: 100%;
+    min-height: inherit;
+    h3 {
+      font-size: 20px;
+    }
+    &:nth-child(odd), &:nth-child(even)  {
+      padding: 31px 14px 36px;
+    }
+    &:nth-child(odd) {
+          background-color: #fafbe3;
+    }
+    &:nth-child(even) {
+          background-color: #f8fad3;
+    }
+    p  {
+      font-size: 18px;
+    }
+  }
+  .about-list li img {
+    margin-right: 10px;
+  }
+  .patients {
+    padding: 70px 0;
+  }
+  .patients-info {
+    font-size: 18px;
+  }
+  .patients-img {
+    background-size: 100%;
+    padding-top: 45px;
+    img {
+      width: 100%;
+      max-width: 230px;
+    }
+  }
+  .about-small .about-list li:nth-child(odd), .about-small .about-list li:nth-child(even) {
+    padding: 40px 15px;
+    text-align: center;
+    min-height: inherit;
+    br {
+      display: none
+    }
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .problem_form {
+    background-size: 150%;
+    padding-top: 240px;
+    background-color: #f7f9fc;
+  }
+  .problem_form .calculationp-box {
+    background-color: transparent;
+    padding:  0 ;
+    h3 {
+      font-size: 20px;
+      max-width: 100%;
+      br {
+        display: none;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .contacts-list li {
+    text-align: left;
+    margin: 0;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1;
+    max-width: 95%;
+  }
+  .gmap {
+  height: 230px;
+}
+  footer .logo {
+    max-width: 80px;
+    img {
+      width: 100%;
+    }
+  }
+  footer {
+    background-color: #f7f9fc;
+    p{
+      font-size: 16px;
+      br {
+        display: none;
+      }
+    }
+  }
+  .footer-menu li {
+    display: block;
+  }
+  .footer-menu li a {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .footer-list li a {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  footer .contact-list {
+    width: 100%;
+    li {
+      &:first-child {
+        display: inline-block;
+      }
+      display: inline-block;
+    }
+  }
 }

@@ -65,6 +65,10 @@
     var $carousel = $(settings.elementsList);
     settings.elementsCount = $carousel.find('div.carousel-item').length;
     settings.minimumOffset = -((settings.elementsCount - 1) * settings.pixelsOffset);
+    
+    
+    
+    
 
     $leftScroll.on('click', function () {
       if (settings.currentLeftValue != settings.maximumOffset) {
@@ -74,8 +78,25 @@
         }, 500);
       }
     });
-
+        
+    var cCLick = 0;
+    
     $rightScroll.on('click', function () {
+    var cShow = $('.show').length;
+      if(settings.currentLeftValue == settings.minimumOffset){
+        console.log(cShow);
+        
+        cCLick += 1;
+           settings.minimumOffset -= 290*cShow;
+        if(cCLick > cShow) {
+           
+           }
+         $('#docror-carousel .carousel-container').append($('#docror-carousel .carousel-container .show').clone().addClass('clone'));
+        
+        
+        
+//        $('#docror-carousel .carousel-container .show:nth-child('+cCLick+')').remove();
+         }
       if (settings.currentLeftValue != settings.minimumOffset) {
         settings.currentLeftValue -= 290;
         $carousel.animate({
@@ -83,11 +104,13 @@
         }, 500);
       }
     });
-
+    
+    
     var item = $('.docror-carousel .carousel-item'),
       dataDoctor, countItem = 0;
 
     $('.check-problem li').click(function () {
+      $('.clone').remove();
       $('.check-problem li').removeClass('active');
       $(this).addClass('active');
 
@@ -100,8 +123,10 @@
         for (var j = 0; j < dataDoctor.length; j++) {
           if ($(this).data('problem') == dataDoctor[j]) {
             $($('.docror-carousel .carousel-item')[i]).show(0);
+            $($('.docror-carousel .carousel-item')[i]).addClass('show');
             break;
           } else {
+            $($('.docror-carousel .carousel-item')[i]).removeClass('show');
             $($('.docror-carousel .carousel-item')[i]).hide(0);
           }
         }
@@ -123,6 +148,8 @@
 
 
     });
+
+    
   }
 })(jQuery);
 
@@ -142,40 +169,131 @@ $(document).ready(function () {
   });
   if ($(document).width() > 480) {
     $('.video-item:nth-child(1)').hover(function () {
-        $(this).next().hide();
-        $(this).next().next().hide();
+        $(this).next().css({
+          'width' : '0',
+          'overflow' : 'hidden',
+          'transition' : '0s',
+          'margin' : '0',
+        });
+        $(this).next().next().css({
+          'width' : '0',
+          'overflow' : 'hidden',
+          'transition' : '0s',
+          'margin' : '0',
+        });
 
       },
       function () {
-        $(this).next().show();
-        $(this).next().next().show();
+      var n=  $(this).next();
+        setTimeout(function(){
+         n.css({
+          'width' : '100%',
+           'transition' : '0.4s',
+           'margin' : '0 13.5px',
+          });
+          n.next().css({
+            'width' : '100%',
+            'transition' : '0.4s',
+            'margin' : '0 13.5px',
+          });
+        }, 200)
       });
     $('.video-item:nth-child(2)').hover(function () {
-        $(this).next().hide();
-        $(this).next().next().hide();
+        $(this).next().css({
+          'width' : '0',
+          'overflow' : 'hidden',
+          'transition' : '0s',
+          'margin' : '0',
+        });
+        $(this).next().next().css({
+          'width' : '0',
+          'overflow' : 'hidden',
+          'transition' : '0s',
+          'margin' : '0',
+        });
 
       },
       function () {
-        $(this).next().show();
-        $(this).next().next().show();
+      var n=  $(this).next();
+        setTimeout(function(){
+         n.css({
+          'width' : '100%',
+           'transition' : '0.4s',
+           'margin' : '0 13.5px',
+          });
+          n.next().css({
+            'width' : '100%',
+            'transition' : '0.4s',
+            'margin' : '0 0 0 13.5px',
+          });
+        }, 200)
       });
     $('.video-item:nth-child(3)').hover(function () {
-        $(this).prev().hide();
-        $(this).next().hide();
+        $(this).prev().css({
+          'width' : '0',
+          'overflow' : 'hidden',
+          'transition' : '0.2s',
+          'margin' : '0',
+        });
+        $(this).next().css({
+          'width' : '0',
+          'overflow' : 'hidden',
+          'transition' : '0s',
+          'margin' : '0',
+        });
 
       },
       function () {
-        $(this).prev().show();
-        $(this).next().show();
+      
+      var n=  $(this).next();
+      var p=  $(this).prev();
+        setTimeout(function(){
+         n.css({
+          'width' : '100%',
+           'transition' : '0.4s',
+           'margin' : '0 0 0 13.5px',
+          });
+          p.css({
+            'width' : '100%',
+            'transition' : '0.4s',
+            'margin' : '0 13.5px',
+          });
+        }, 200)
+
       });
     $('.video-item:nth-child(4)').hover(function () {
-        $(this).prev().hide();
-        $(this).prev().prev().hide();
+      $(this).css({
+        'transition' : '0s',
+      })
+        $(this).prev().css({
+          'width' : '0',
+          'overflow' : 'hidden',
+          'transition' : '0s',
+          'margin' : '0',
+        });
+        $(this).prev().prev().css({
+          'width' : '0',
+          'overflow' : 'hidden',
+          'transition' : '0s',
+          'margin' : '0',
+        });
 
       },
       function () {
-        $(this).prev().show();
-        $(this).prev().prev().show();
+      var p=  $(this).prev();
+        setTimeout(function(){
+         p.css({
+          'width' : '100%',
+           'transition' : '0.4s',
+           'margin' : '0 13.5px',
+          });
+          p.prev().css({
+            'width' : '100%',
+            'transition' : '0.4s',
+            'margin' : '0 13.5px',
+          });
+        }, 200)
+
       });
 
 
@@ -357,18 +475,19 @@ $(document).ready(function () {
 
   $('.modal-btn').click(function (e) {
     e.preventDefault;
-    $('#' + $(this).data('modal')).show('0');
+    
+    $('#' + $(this).data('modal')).show('400');
     $('#' + $(this).data('modal')).animate({
       opacity: 1,
-    }, 0);
+    }, 400);
     $('body').addClass('overl-h');
   });
   $('.overlay, .popup__close').click(function () {
     $('body').removeClass('overl-h');
-    $('.modal').hide('0');
+    $('.modal').hide('400');
     $('.modal').animate({
       opacity: 0,
-    }, 0);
+    }, 400);
   });
 
   $("input[name='phone']").inputmask("+38 (099) 999-99-99");

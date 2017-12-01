@@ -262,9 +262,9 @@ $(document).ready(function () {
 
       });
     $('.video-item:nth-child(4)').hover(function () {
-      $(this).css({
-        'transition' : '0s',
-      })
+     /* $(this).css({
+        'transition' : '0.4s',
+      })*/
         $(this).prev().css({
           'width' : '0',
           'overflow' : 'hidden',

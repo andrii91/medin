@@ -1333,6 +1333,10 @@ footer {
       font-size: 22px;
       font-weight: 400;
       line-height: 48px;
+      transition: 0.2s;
+      &:hover {
+        color: #75c043;
+      }
     }
   }
 }

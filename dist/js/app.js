@@ -222,8 +222,28 @@ $(document).ready(function () {
   });
 
 
-  $('.check-problem li').hover(function () {
+  $('.check-problem li').hover(function (e) {
       $('.docror-carousel').show(0);
+     
+ // положение элемента
+    var pos = $(this).parents('.check-problem').offset();
+    var elem_left = pos.left;
+    var elem_top = pos.top;
+    // положение курсора внутри элемента
+    var Xinner = e.pageX - elem_left;
+    var Yinner = e.pageY - elem_top;
+    console.log("X: " + Xinner + " Y: " + Yinner);
+    
+    if ($(document).width() > 480) {
+    
+       $('.docror-carousel').css({
+          'top' : Yinner + 15 + 'px',
+         'left' : Xinner + 'px',
+         'margin-left' : '-145px',
+         'min-height' : '412px',
+         'max-height' : '413px',
+      });
+    }
       /*var item = $('.docror-carousel .carousel-item'),
         dataDoctor, countItem = 0;
       for (var i = 0; i < item.length; i++) {
@@ -246,10 +266,11 @@ $(document).ready(function () {
       }*/
     },
     function () {
-      if ($('.check-problem li.active').length > 0) {
+      if ($(this).hasClass('active')) {
         $('.docror-carousel').show(0);
       } else {
         $('.docror-carousel').hide(0);
+        $('.check-problem li').removeClass('active');
       }
     });
 

@@ -13,7 +13,6 @@ body {
 }
   
 header {
-//  background: url("../images/fon1.png") no-repeat center top;
   overflow: hidden;
   &:before {
     content: "";
@@ -671,6 +670,7 @@ text-align: left;
   }
     video {
       height: 475px;
+      width: 100%;
     }
   &:nth-child(1) {
     .video-poster {
@@ -1411,4 +1411,5 @@ footer {
   min-height: 100vh;
   background: url(../images/fon1.png) no-repeat center ;
   background-size: cover;
+  width: 100%;
 }

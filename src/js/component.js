@@ -550,18 +550,7 @@ $(document).ready(function () {
 
   $("input[name='phone']").inputmask("+38 (099) 999-99-99");
 
-  $('.video-link').click(function () {
-    var destination = $(".video").offset().top - 0;
-    $("body,html").animate({
-      scrollTop: destination
-    }, 500);
-  });
-  $('.history-link').click(function () {
-    var destination = $(".history").offset().top - 0;
-    $("body,html").animate({
-      scrollTop: destination
-    }, 500);
-  });
+
 
 
 
@@ -610,6 +599,43 @@ $(document).ready(function () {
 
     $(this).parent().hide();
 
+  });
+
+    $('.video-link').click(function (e) {
+    e.preventDefault;
+    var destination = $(".video").offset().top - 50;
+    $("body,html").animate({
+      scrollTop: destination
+    }, 500);
+  });
+  $('.history-link').click(function (e) {
+    e.preventDefault;
+    var destination = $(".history").offset().top - 50;
+    $("body,html").animate({
+      scrollTop: destination
+    }, 500);
+  });
+
+  $('.docror-link').click(function (e) {
+    e.preventDefault;
+    var destination = $(".docror").offset().top - 50;
+    $("body,html").animate({
+      scrollTop: destination
+    }, 500);
+  });
+  $('.about-link').click(function (e) {
+    e.preventDefault;
+    var destination = $(".about").offset().top - 50;
+    $("body,html").animate({
+      scrollTop: destination
+    }, 500);
+     });
+  $('.contacts-link').click(function (e) {
+    e.preventDefault;
+    var destination = $(".contacts").offset().top - 50;
+    $("body,html").animate({
+      scrollTop: destination
+    }, 500);
   });
 
 });

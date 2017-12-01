@@ -163,7 +163,6 @@
 	position: fixed;
 	z-index: 1050;
 	display: none;
-	overflow: hidden;
 	outline: 0;
 	opacity: 0;
 	background-color: #fff;
@@ -174,7 +173,6 @@
     right: 0;
 	width: 100%;
 	height: auto;
-	backface-visibility: hidden;
 	transition: all 400ms;
     padding: 60px; 
   
